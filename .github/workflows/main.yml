@@ -12,13 +12,8 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-          - name: 'testing print folder contents before'
-            run: ls
-          - name: 'testing printing'
-            run: echo hello
+          
 
           - uses: actions/checkout@v3
-          - name: 'testing print folder contents after '
-            run: ls
-          - name: 'testing print folder contents after hidden '
-            run: ls -a
+          - name: "login to docker hub"
+            run: docker login --username ${{secrets.docker_username}} --password ${{secrets.docker_password}} 
