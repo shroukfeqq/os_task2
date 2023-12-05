@@ -13,6 +13,6 @@ jobs:
 
         steps:
           - name: 'testing github actions'
-              run: pwd
+            run: pwd
           - name: 'testing printing'
-              run: echo hello
+            run: echo hello
