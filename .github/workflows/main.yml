@@ -12,7 +12,11 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-          - name: 'testing print folder contents'
+          - name: 'testing print folder contents before'
             run: ls
           - name: 'testing printing'
             run: echo hello
+
+          - uses: actions/checkout@v3
+          - name: 'testing print folder contents after '
+            run: ls
